@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢想創意工作室|產品列表</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Noto+Serif+TC&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+        integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+        integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: "Noto Serif JP", serif;
+            box-sizing: border-box;
+            background-color: beige2;
+            text-decoration: none;
+
+            body {
+                margin: 0;
+                font-family: "Kaisei Decol", serif;
+            }
+
+            header {
+                padding: 10px;
+                /* background-color: gray; */
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .container {
+                width: 80%;
+                /* 寬度 */
+                max-width: 1170px;
+                /* 最大寬度 */
+                margin: auto;
+                /* 外邊界:自動 */
+            }
+
+            /* ::before */
+            .container::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            form::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            footer {
+                padding: 30px;
+                background-color: lightgray;
+            }
+
+            .product {
+                width: 25%;
+                /* background-color: lightseagreen; */
+                /* border:1px solid black; */
+                padding: 20px;
+            }
+
+            @media (max-width:767px) {
+                .product {
+                    width: 100%;
+                }
+            }
+
+            .float-left {
+                float: left;
+            }
+
+            .w-100 {
+                width: 100%;
+            }
+
+            h2 {
+                text-align: center;
+
+            }
+
+            .label-name {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea,
+            select {
+                width: 100%;
+                padding: 10px 8px;
+                border: 1px solid lightgray;
+                border-radius: 4px;
+                margin-bottom: 20px;
+            }
+
+            input[type="submit"] {
+                border: none;
+                background-color: orange;
+                padding: 5px;
+                width: 200px;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                color: white;
+                cursor: pointer;
+                float: right;
+                font-size: 18px;
+            }
+
+            input[type="submit"]:hover {
+                background-color: rgb(245, 106, 0);
+            }
+
+            /* pagetop 回到上方 */
+            .pagetop {
+                position: fixed;
+                /* 固定定位 */
+                display: block;
+                /* 塊級元素 */
+                right: 20px;
+                bottom: 20px;
+                /* top right bottom left */
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                text-align: center;
+                line-height: 50px;
+                /* 行高 150% 180%*/
+                text-decoration: none;
+                color: white;
+                border-radius: 50%;
+
+            }
+
+            /* display:inline 行內 */
+            /* display:block 塊級 */
+            /* display:flex */
+            /* display:grid */
+            .bg-gray {
+                background: #f3f3f3;
+                padding: 20px 0px;
+                /*上下 左右*/
+            }
+
+            /* 後代選取器 空白鍵 */
+            /* 子代選取器 > */
+            .breadcrumb ol {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            .breadcrumb ol li {
+                float: left;
+            }
+
+            /* 後代 相鄰 偽類 */
+            .breadcrumb ol li+li::before {
+                content: "\00a0>\00a0";
+            }
+
+            .breadcrumb a {
+                color: gray;
+                text-decoration: none;
+            }
+
+            .breadcrumb a:hover {
+                color: black;
+            }
+
+            h1 {
+                width: 40%;
+            }
+
+            h1>a {
+                color: rgb(21, 21, 21);
+                text-decoration: none;
+            }
+
+            nav {
+                width: 60%;
+            }
+
+            nav>ul {
+                padding: 0px;
+                margin: 0px;
+                list-style-type: none;
+            }
+
+            nav>ul>li {
+                float: left;
+                width: 25%;
+            }
+
+            nav>ul>li>a {
+                display: block;
+                line-height: 40px;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(21, 21, 21);
+                font-size: 18px;
+            }
+
+            nav>ul>li>a:hover {
+                color: orange;
+            }
+
+            .position-relative {
+                position: relative;
+            }
+
+            .position-absolute {
+                position: absolute;
+            }
+
+            .tag {
+                right: -25px;
+                top: -25px;
+                background-color: green;
+                color: white;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 50%;
+                text-align: center;
+                /* padding: 10px; */
+                font-size: 12px;
+            }
+    </style>
+</head>
+
+<body>
+    <!-- 頁首 header start -->
+    <header>
+        <!-- div.container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{item$} -->
+        <div class="container">
+            <h1 class="float-left"><a href="index.html">夢想創意工作室</a></h1>
+            <nav class="float-left">
+                <ul>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="product.html">產品列表</a></li>
+                    <li><a href="store.html">門市資訊</a></li>
+                    <li><a href="conmm.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 頁首 header end -->
+    <!-- 麵包屑 breadcrumb start -->
+    <div class="bg-gray breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li>產品列表</li>
+            </ol>
+        </div>
+    </div>
+    <!-- 麵包屑 breadcrumb end -->
+
+    <!-- .container start -->
+    <div class="container">
+        <h2>唱片列表</h2>
+        <!-- .float-left.product*15>img.w-100[src="https://placehold.co/600x400"]+p{商品$} -->
+        <div class="float-left product">
+            <div class="position-relative">
+                <img src="img/p1.jpg" alt="" class="w-100">
+                <p><a href="">商品1</a></p>
+                <div class="tag position-absolute">NEW</div>
+            </div>
+        </div>
+        <div class="float-left product">
+            <div class="position-relative">
+                <img src="img/p2.jpg" alt="" class="w-100">
+                <p><a href="img/p2.jpg"></a>商品2</p>
+                <div class="tag position-absolute">NEW</div>
+            </div>
+        </div>
+        <div class="float-left product">
+            <img src="img/p3.jpg" alt="" class="w-100">
+            <p>商品3</p>
+        </div>
+        <div class="float-left product">
+            <img src="img/p4.jpg" alt="" class="w-100">
+            <p>商品4</p>
+        </div>
+        <div class="float-left product">
+            <div class="position-relative">
+                <img src="img/p5.jpg" alt="" class="w-100">
+                <p>商品5</p>
+                <div class="tag position-absolute">NEW</div>
+            </div>
+        </div>
+        <div class="float-left product">
+            <img src="img/p6.jpg" alt="" class="w-100">
+            <p>商品6</p>
+        </div>
+        <div class="float-left product">
+            <img src="img/p7.jpg" alt="" class="w-100">
+            <p>商品7</p>
+        </div>
+        <div class="float-left product">
+            <img src="img/p8.jpg" alt="" class="w-100">
+            <p>商品8</p>
+        </div>
+        <div class="float-left product">
+            <img src="img/p9.jpg" alt="" class="w-100">
+            <p>商品9</p>
+            
+        </div>
+        <div class="float-left product">
+            <img src="img/p10.jpg" alt="" class="w-100">
+            <p>商品10</p>
+        </div>
+        <div class="float-left product">
+            <img src="img/p11.jpg" alt="" class="w-100">
+            <p>商品11</p>
+            
+        </div>
+        <div class="float-left product">
+            <img src="img/p12.jpg" alt="" class="w-100">
+            <p>商品12</p>
+        </div>
+        <div class="float-left product">
+            <img src="img/p13.jpg" alt="" class="w-100">
+            <p>商品13</p>
+            
+        </div>
+        <div class="float-left product">
+            <img src="img/p14.jpg" alt="" class="w-100">
+            <p>商品14</p>
+        </div>
+        <div class="float-left product">
+            <img src="img/p15.jpg" alt="" class="w-100">
+            <p>商品15</p>
+        </div>
+
+    </div>
+    <!-- .container end -->
+    <!-- break 斷行/換行 -->
+    <a href="#" class="pagetop">TOP</a>
+    <footer>
+        <div class="container">
+            <p>copyright &copy; 版權所有. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

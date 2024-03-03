@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢想創意工作室|株式會社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Noto+Serif+TC&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+        integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+        integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            font-family: "Noto Serif JP", serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+        }
+
+        header {
+            padding: 10px;
+            /* background-color: gray; */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            /* 寬度 */
+            max-width: 1170px;
+            /* 最大寬度 */
+            margin: auto;
+            /* 外邊界:自動 */
+        }
+
+        /* ::before */
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        form::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            padding: 30px;
+            background-color: lightgray;
+        }
+
+        .product {
+            width: 25%;
+            /* background-color: lightseagreen; */
+            /* border:1px solid black; */
+            padding: 20px;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+
+        }
+
+        .label-name {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 8px;
+            border: 1px solid lightgray;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            border: none;
+            background-color: orange;
+            padding: 5px;
+            width: 200px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color: white;
+            cursor: pointer;
+            float: right;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(245, 106, 0);
+        }
+
+        /* pagetop 回到上方 */
+        .pagetop {
+            position: fixed;
+            /* 固定定位 */
+            display: block;
+            /* 塊級元素 */
+            right: 20px;
+            bottom: 20px;
+            /* top right bottom left */
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            text-align: center;
+            line-height: 50px;
+            /* 行高 150% 180%*/
+            text-decoration: none;
+            color: white;
+            border-radius: 50%;
+
+        }
+
+        /* display:inline 行內 */
+        /* display:block 塊級 */
+        /* display:flex */
+        /* display:grid */
+        .bg-gray {
+            background: #f3f3f3;
+            padding: 20px 0px;
+            /*上下 左右*/
+        }
+
+        /* 後代選取器 空白鍵 */
+        /* 子代選取器 > */
+        .breadcrumb ol {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .breadcrumb ol li {
+            float: left;
+        }
+
+        /* 後代 相鄰 偽類 */
+        .breadcrumb ol li+li::before {
+            content: "\00a0>\00a0";
+        }
+
+        .breadcrumb a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: black;
+        }
+
+        h1 {
+            width: 40%;
+        }
+
+        h1>a {
+            color: rgb(21, 21, 21);
+            text-decoration: none;
+        }
+
+        nav {
+            width: 60%;
+        }
+
+        nav>ul {
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+        }
+
+        nav>ul>li {
+            float: left;
+            width: 25%;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(21, 21, 21);
+            font-size: 18px;
+        }
+
+        nav>ul>li>a:hover {
+            color: orange;
+        }
+
+        iframe {
+            vertical-align: top;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 頁首 header start -->
+    <header>
+        <!-- div.container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{item$} -->
+        <div class="container">
+            <h1 class="float-left"><a href="index.html">夢想創意工作室</a></h1>
+            <nav class="float-left">
+                <ul>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="product.html">產品列表</a></li>
+                    <li><a href="store.html">門市資訊</a></li>
+                    <li><a href="conmm.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 頁首 header end -->
+    <!-- 麵包屑 breadcrumb start -->
+    <div class="bg-gray breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li>聯絡我們</li>
+            </ol>
+        </div>
+    </div>
+    <!-- 麵包屑 breadcrumb end -->
+
+    <!-- .container start -->
+    <div class="container">
+        <h2>聯絡我們</h2>
+        <!-- 
+            input 輸入框
+              -type 輸入框類型
+              -id   對應label名稱
+              -name 傳輸到資料庫的識別名稱
+
+            type
+              -text        文字
+              -password    密碼
+              -placeholder 預留文字
+              -value       傳送值
+         -->
+        <form action="">
+            <label class="label-name" for="name">姓名</label>
+            <input type="text" id="name" name="name" placeholder="請輸入姓名" autocomplete="off">
+            <br>
+            <label class="label-name" for="phone">電話</label>
+            <input type="text" id="phone" name="phone" placeholder="請輸入電話" autocomplete="off">
+            <br>
+            <label class="label-name" for="address">地址</label>
+            <input type="text" id="address" name="address" placeholder="請輸入地址" autocomplete="off">
+            <br>
+            <label class="label-name" for="email">電子郵件</label>
+            <input type="email" id="email" name="email" autocomplete="off">
+            <br>
+            <label class="label-name" for="target">聯絡目的</label>
+            <select name="target" id="target">
+                <option>會員帳密問題</option>
+                <option>退換貨</option>
+                <option>運費</option>
+            </select>
+            <br>
+            <label for="">稱謂</label>
+            <!-- 男 -->
+            <input type="radio" id="male" name="gender" value="先生">
+            <label for="male">先生</label>
+            <!-- 女 -->
+            <input type="radio" id="female" name="gender" value="女士">
+            <label for="female">女士</label>
+            <br>
+            <!-- 傳輸陣列要使用中括號結尾[] -->
+            <label for="interests">興趣</label>
+            <input type="checkbox" id="programming" name="interests[]" value="程式">
+            <label for="programming">程式</label>
+            <input type="checkbox" id="gaming" name="interests[]" value="遊戲">
+            <label for="gaming">遊戲</label>
+            <input type="checkbox" id="reading" name="interests[]" value="閱讀">
+            <label for="reading">閱讀</label>
+            <br>
+            <label for="message">內容</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" value="送出表單">
+        </form>
+    </div>
+    <!-- .container end -->
+    <!-- break 斷行/換行 -->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6040248012596!2d120.64844997534838!3d24.150540478399446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9650422ae1%3A0x334dfd5796c49ff6!2z6LOH5bGV5ZyL6ZqbLeWOnyDos4fnrZbmnIMt5pW45L2N5pWZ6IKy56CU56m25omALeS4reWNgA!5e0!3m2!1szh-TW!2stw!4v1708494986443!5m2!1szh-TW!2stw"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a href="#" class="pagetop">TOP</a>
+    <footer>
+        <div class="container">
+            <p>copyright &copy; 版權所有. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

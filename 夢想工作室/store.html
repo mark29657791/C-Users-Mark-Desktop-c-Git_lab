@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢想創意工作室|株式會社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Noto+Serif+TC&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+        integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+        integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Noto Serif JP", serif;
+        }
+
+        body {
+            margin: 0;
+            /* 
+                1.已先掛載套用，英文字沒有中文，中文會以後面有掛載的中文字型顯示
+                2.如果離線狀態導致字型沒有顯示，也是以後面的掛載
+            */
+        }
+
+        header {
+            padding: 10px;
+            /* background-color: gray; */
+        }
+
+        h1 {
+            margin: 0;
+        }
+        h2{
+            margin-left: 10%;
+            margin-top: 5%;
+            font-size: xx-large;
+
+        }
+
+
+        .container {
+            width: 80%;
+            /* 寬度 */
+            max-width: 1170px;
+            /* 最大寬度 */
+            margin: auto;
+            /* 外邊界:自動 */
+        }
+
+        /* ::before */
+        table.list {
+            float: right;
+            clear: both;
+            
+        }
+        table>tr>th{
+            text-decoration: none; 
+        }
+        
+
+
+
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+            
+        }
+
+        form::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            padding: 30px;
+            background-color: lightgray;
+        }
+
+        .store {
+            width: 33.33333%;
+            padding: 20px;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .label-name {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 8px;
+            border: 1px solid lightgray;
+            border-radius: 40px;
+            margin-bottom: 20px;
+            
+        }
+        
+
+        .list img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        input[type="submit"] {
+            border: none;
+            background-color: orange;
+            padding: 5px;
+            width: 200px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color: white;
+            cursor: pointer;
+            float: right;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(245, 106, 0);
+        }
+
+        /* pagetop 回到上方 */
+        .pagetop {
+            position: fixed;
+            /* 固定定位 */
+            display: block;
+            /* 塊級元素 */
+            right: 20px;
+            bottom: 20px;
+            /* top right bottom left */
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            text-align: center;
+            line-height: 50px;
+            /* 行高 150% 180%*/
+            text-decoration: none;
+            color: white;
+            border-radius: 50%;
+
+        }
+
+        /* display:inline 行內 */
+        /* display:block 塊級 */
+        /* display:flex */
+        /* display:grid */
+        .bg-gray {
+            background: #f3f3f3;
+            padding: 20px 0px;
+            /*上下 左右*/
+        }
+
+        /* 後代選取器 空白鍵 */
+        /* 子代選取器 > */
+        .breadcrumb ol {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            
+        }
+
+        .breadcrumb ol li {
+            float: left;
+        }
+
+        /* 後代 相鄰 偽類 */
+        .breadcrumb ol li+li::before {
+            content: "\00a0>\00a0";
+        }
+
+        .breadcrumb a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: black;
+        }
+
+        h1 {
+            width: 40%;
+        }
+
+        h1>a {
+            float: left;
+            color: rgb(21, 21, 21);
+            text-decoration: none;
+        }
+
+        nav {
+            width: 60%;
+        }
+
+        nav>ul {
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+
+        }
+
+        nav>ul>li {
+            float: left;
+            width: 25%;
+        }
+
+        nav>ul>li>a {
+            display: block;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(21, 21, 21);
+            font-size: 18px;
+        }
+
+        nav>ul>li>a:hover {
+            color: orange;
+        }
+
+        .social-icon {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .social-icon a {
+            /* color:gray; */
+            font-size: 32px;
+            margin-right: 10px;
+        }
+
+        .icon-facebook {
+            color: #4267B2;
+        }
+
+        .icon-instagram {
+            color: #E1306C;
+        }
+
+        .icon-youtube {
+            color: #FF0000;
+        }
+
+        .icon-line {
+            color: #06c755;
+        }
+
+        /* , 群組選取器 */
+        .list,
+        th,
+        td{
+            border: 2px solid rgb(179, 179, 179);
+            border-collapse: collapse;
+        }
+
+        th {
+            font-size: 24px;
+            background: lightgray;
+            
+            
+        }
+
+        /* odd奇數 / even偶數 */
+        tr:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+
+        th,
+        td {
+            padding: 0px;
+        }
+
+        /* 當滑鼠滑入tr列時更換樣式 */
+        tr:hover {
+            background-color: rgb(156, 156, 156);
+        }
+        @media (max-width:767px) {
+                .product {
+                    width: 100%;
+                }
+            }
+
+        .container {
+            width: 80%;
+            /* 寬度 */
+            max-width: 1170px;
+            /* 最大寬度 */
+            margin: auto;
+            /* 外邊界:自動 */
+        }
+
+        .container {
+            width: 80%;
+            /* 寬度 */
+            max-width: 1170px;
+            /* 最大寬度 */
+            margin: auto;
+            text-align: center;
+
+            /* 外邊界:自動 */
+        }
+
+        /* ::before */
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+            
+        }
+
+        
+        .float-left {
+            float: left;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+
+
+        .list {
+            width: 70%;
+            margin-bottom: 40px;
+            margin-right: auto;
+            
+        }
+        
+
+        aside>p>a{
+            font-size: 24px;
+            width: 20%;
+            margin-left: 10%;
+            margin-top: 40px;
+            text-decoration: none; 
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header{頁首}+.container{內容}+footer{頁尾} -->
+    <!-- 頁首 header start -->
+    <header>
+        <!-- div.container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{item$} -->
+        <div class="container">
+            <h1 class="float-left"><a href="index.html">夢想創意工作室</a></h1>
+            <nav class="float-left">
+                <ul>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="product.html">產品列表</a></li>
+                    <li><a href="store.html">門市資訊</a></li>
+                    <li><a href="conmm.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 頁首 header end -->
+    <!-- 麵包屑 breadcrumb start -->
+    <div class="bg-gray breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li>門市資訊</li>
+            </ol>
+        </div>
+    </div>
+    <!-- 主導覽 start -->
+    <h2>門市資訊</h2>
+    <aside>
+        
+        <p><a href="#">北部門市</a></p>
+        <p><a href="#">中部門市</a></p>
+        <p><a href="#">南部門市</a></p>
+    </aside>
+    <!-- 主導覽 end -->
+    <!-- 麵包屑 breadcrumb end -->
+    <div class="container">
+        
+        <table class="list",h2>
+            <!-- .float-left.store*15>img.w-100[src="https://placehold.co/600x400"]+p{商品$} -->
+            <tr>
+                <th>北部門市</th>
+                <th>中部門市</th>
+                <th>南部門市</th>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="img/s1.jpg" alt="台北大安區門市">台北大安區門市</a></td>
+                <td><a href="#"><img src="img/s2.jpg" alt="台中北區門市">台中北區門市</a></td>
+                <td><a href="#"><img src="img/s3.jpg" alt="台南安平門市">台南安平門市</a></td>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="img/s4.jpg" alt="新竹竹北大安門市">新竹竹北大安門市</a></td>
+                <td><a href="#"><img src="img/s5.jpg" alt="彰化員林門市">彰化員林門市</a></td>
+                <td><a href="#"><img src="img/s6.jpg" alt="嘉義文化路門市">嘉義文化路門市</a></td>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="img/s7.jpg" alt="新北板橋門市">新北板橋門市</a></td>
+                <td><a href="#"><img src="img/s8.jpg" alt="南投埔里門市">南投埔里門市</a></td>
+                <td><a href="#"><img src="img/s9.jpg" alt="高雄大寮門市">高雄大寮門市</a></td>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="img/s10.jpg" alt="桃園中壢門市">桃園中壢門市</a></td>
+                <td><a href="#"><img src="img/s11.jpg" alt="台中南屯門市">台中南屯門市</a></td>
+                <td><a href="#"><img src="img/s12.jpg" alt="高雄大港門市">高雄大港門市</a></td>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="img/s13.jpg" alt="基隆信義門市">基隆信義門市</a></td>
+                <td><a href="#"><img src="img/s14.jpg" alt="雲林斗六門市">雲林斗六門市</a></td>
+                <td><a href="#"><img src="img/s15.jpg" alt="屏東恆春門市">屏東恆春門市</a></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="container social-icon">
+
+        <a class="icon-facebook" href="https://www.starbucks.com.tw/home/index.jspx" target="_blank"><i
+                class="fa-brands fa-facebook"></i></a>
+        <a class="icon-instagram" href="https://www.instagram.com/starbuckstw/" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+        <a class="icon-youtube" href="https://www.youtube.com/user/STARBUCKSTW" target="_blank"><i
+                class="fa-brands fa-youtube"></i></a>
+        <a class="icon-line" href="https://line.me/R/ti/p/@471vnurh?from=page&openQrModal=true&searchId=471vnurh"
+            target="_blank"><i class="fa-brands fa-line"></i></a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>copyright &copy; 版權所有. All rights reserved.</p>
+        </div>
+        <!--top-->
+        <a href="" class="pagetop">top</a>
+        <!--top end-->
+    </footer>
+</body>
+
+</html>

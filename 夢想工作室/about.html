@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夢想創意工作室|關於我們</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Noto+Serif+TC&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
+        integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+        integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        *{
+            box-sizing: border-box;
+            font-family:  "Noto Serif JP", serif;
+        }
+        body{
+            margin: 0;
+            
+        }
+        header{
+            padding: 10px;
+            /* background-color: gray; */
+        }
+        h1{
+            margin: 0;
+        }
+        .container{
+            max-width:1170px;  /* 最大寬度 */
+            margin: auto;      /* 外邊界:自動 */
+            
+            
+
+        }
+        /* ::before */
+        .container::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .position-relative
+        {
+            max-width:1170px;   
+            position: relative;
+            display: block;
+            margin-left: 600px
+            
+            
+        }
+
+        .position-relative::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .position-relative {
+            margin-right: auto;
+            text-align: center;
+            width: 50%;
+            max-width: 600px;
+        }
+        
+
+        
+
+        form::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer{
+            padding: 30px;
+            background-color: lightgray;
+        }
+        
+        .product{
+            width: 25%;
+            /* background-color: lightseagreen; */
+            /* border:1px solid black; */
+            padding: 20px;
+        }
+        .float-left{
+            float: left;
+        }
+        
+        h2{
+            margin-left: 10%;
+            margin-top: 5%;
+            font-size: xx-large;
+        }
+        .label-name{
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea, select{
+            width: 100%;
+            padding: 10px 8px;
+            border:1px solid lightgray;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"]{
+            border:none;
+            background-color: orange;
+            padding:5px;
+            width: 200px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color:white;
+            cursor: pointer;
+            float:right;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(245, 106, 0);
+        }
+        /* pagetop 回到上方 */
+        .pagetop{
+            position: fixed; /* 固定定位 */
+            display: block;  /* 塊級元素 */
+            right: 20px;
+            bottom: 20px;
+            /* top right bottom left */
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            text-align: center;
+            line-height: 50px; /* 行高 150% 180%*/
+            text-decoration: none;
+            color:white;
+            border-radius: 50%;
+            
+        }
+    
+        /* display:inline 行內 */
+        /* display:block 塊級 */
+        /* display:flex */
+        /* display:grid */
+        .bg-gray{
+            background: #f3f3f3;
+            padding: 20px 0px ; /*上下 左右*/
+        }
+        /* 後代選取器 空白鍵 */
+        /* 子代選取器 > */
+        .breadcrumb ol{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            
+        }
+        .breadcrumb ol li{
+            float: left;
+        }
+        /* 後代 相鄰 偽類 */
+        .breadcrumb ol li+li::before{
+            content: "\00a0>\00a0";
+        }
+        .breadcrumb a{
+            color:gray;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover{
+            color:black;
+        }
+        h1 {
+                width: 40%;
+            }
+
+            h1>a {
+                color: rgb(21, 21, 21);
+                text-decoration: none;
+            }
+
+            nav {
+                width: 60%;
+            }
+
+            nav>ul {
+                padding: 0px;
+                margin: 0px;
+                list-style-type: none;
+            }
+            
+
+            nav>ul>li {
+                float: left;
+                width: 25%;
+            }
+
+            nav>ul>li>a {
+                display: block;
+                line-height: 40px;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(21, 21, 21);
+                font-size: 18px;
+                text-decoration: none;
+            }
+
+            nav>ul>li>a:hover {
+                color: orange;
+            }
+        nav>ul>li>a:hover{color:orange;}
+        aside{
+            font-size: 24px;
+            width: 20%;
+            margin-left: 10%;
+            margin-top: 60px;
+            text-decoration: none;
+
+        }
+        aside>p>a{
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 頁首 header start -->
+    <header>
+        <!-- div.container>h1.float-left>a{網站名稱}^nav.float-left>ul>li*4>a{item$} -->
+        <div class="container">
+            <h1 class="float-left"><a href="index.html">夢想創意工作室</a></h1>
+            <nav class="float-left">
+                <ul>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="product.html">產品列表</a></li>
+                    <li><a href="store.html">門市資訊</a></li>
+                    <li><a href="conmm.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 頁首 header end -->
+    <!-- 麵包屑 breadcrumb start -->
+    <div class="bg-gray breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">首頁</a></li>
+                <li>關於我們</li>
+            </ol> 
+        </div>
+    </div>
+    <!-- 麵包屑 breadcrumb end -->
+    <h2>關於我們</h2>
+    <aside>
+    
+        <p><a href="#target">唱片的歷史</a></p>
+        <p><a href="#target2">唱片的特性</a></p>
+        <p><a href="#target3">唱片行的歷史</a></p>
+    </aside>
+    <!-- .container start -->
+    
+            <div class="position-relative">
+                <img src="img/z1.jpg" alt="" class="w-100">
+                
+                <p id="target"><a href="img/p2.jpg"></a><h3>唱片的歷史</h3> <br>
+                    唱片的前身是筒形的留聲機，它是由美國發明家愛迪生於1877年發明的，能夠將聲音轉換成金屬針的震動，並刻錄在蠟製的圓筒上。這種留聲機的缺點是錄音時間短，複製困難，聲音品質差。1888年，德國移民貝利納改進了這項技術，發明了盤狀的唱片，並用環狀刻盤和製版模具，實現了聲音的印刷和量產。這種唱片被稱為粗紋唱片，每分鐘轉速為78轉，每面最多只能錄不到三分鐘的聲音，並且只能錄製單聲道的聲音。粗紋唱片的優勢是成本低，普及度高，成為了20世紀初期音樂錄製和發行的主流載體。
+                    
+                    隨著電子技術的發展，唱片的錄製和播放也實現了電氣化。1924年，電動唱片刻紋頭的發明，使得唱片的聲音信號能夠被放大和細化，提高了唱片的响度和动态。1925年，電氣麥克風的出現，使得錄音的頻率響應範圍得到擴展，提高了唱片的保真度。1948年，美國哥倫比亞公司推出了33又1/3轉/分的密紋唱片，它採用了聚氯乙烯材料，使得唱片的壽命和耐磨性大大提高，並且能夠錄製更長的聲音，每面最多可達30分鐘。密紋唱片的另一個創新是錄製立體聲的技術，它能夠在唱片的兩側壁刻錄兩個聲道的信號，從而重現聲音的空間感。密紋唱片的出現，標誌著唱片進入了高保真的時代，並且成為了20世紀中後期音樂文化的重要載體。</p>
+                <br>
+                <img src="img/z3.jpg" alt="" class="w-100">
+                <p id="target2"><a href="img/p2.jpg"></a><h3>唱片的特性</h3>
+                    唱片作為一種音樂載體，有著自身的特性和魅力，它不僅能夠重現音樂的聲音，也能夠展現音樂的形象和內涵。唱片的特性，可以從以下幾個方面來說明：
+                    <br>
+                    <br>
+                    <br>
+                    唱片是一種物理的媒介，它將聲音信號轉化為唱片表面的細微凹凸，並通過唱針和唱機來還原聲音。這種物理的過程，使得唱片的聲音有著獨特的溫度和質感，有時甚至會產生一些雜音和失真，但這些反而增添了唱片的韻味和個性。
+                    <br>
+                    <br>
+                    <br>
+
+                    唱片是一種視覺的藝術，它的外觀和設計，也是音樂的一部分。唱片的封面、封底、內頁、標籤等，都是音樂人和設計師的創作，它們不僅提供了音樂的基本信息，也表達了音樂的主題和風格，甚至引發了觀眾的想像和聯想。唱片的視覺藝術，也是音樂文化的重要元素，有時甚至會成為音樂的標誌和符號。
+                    <br>
+                    <br>
+                    <br>
+
+                    唱片是一種文化的記憶，它記錄了音樂的歷史和變遷，也反映了音樂與社會、政治、經濟、科技等方面的關係和互動。唱片不僅是音樂的產品，也是音樂的見證，它承載了音樂人和聽眾的情感和經歷，也傳遞了音樂的<br></p>
+                <br>
+                <img src="img/z2.jpg" alt="" class="w-100">
+                <p id="target3"><a href="img/p2.jpg"></a><h3>唱片行的歷史</h3>
+                    唱片行是指專門銷售唱片的商店，它是音樂消費和流行的重要場所，也是音樂愛好者和唱片收藏者的聚集地。唱片行的歷史，可以追溯到唱片的發明和發行。最早的唱片行，是由唱片公司或唱片製造商直接經營的，或者是由其他類型的商店兼營的，如文具店、鐘錶店、藥房等。這些唱片行的規模不大，唱片的種類也不多，主要是為了推廣唱片的產品和技術，滿足少數消費者的需求。
+                    <br>
+                    <br>
+                    <br>
+                    隨著唱片的普及和多樣化，唱片行也開始出現專業化和差異化的發展。一方面，有些唱片行專注於銷售某一種類或風格的音樂，如古典音樂、爵士樂、搖滾樂等，以吸引特定的音樂愛好者和收藏者。另一方面，有些唱片行則致力於發掘和推廣新的音樂人和音樂作品，如獨立音樂、地下音樂、實驗音樂等，以創造音樂的多元性和創新性。這些唱片行不僅是音樂的銷售場所，也是音樂的傳播和交流的平台，對音樂文化的形成和發展有著重要的影響。</p>
+                <br>
+            </div>
+     
+    <!-- .container end -->
+    <!-- break 斷行/換行 -->
+    <a href="#" class="pagetop">TOP</a>      
+    <footer>
+        <div class="container">
+            <p>copyright &copy; 版權所有. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
